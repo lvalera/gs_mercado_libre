@@ -29,14 +29,12 @@
                                                 class="col-lg-3 o_light_label" />
                                             <field name="meli_client_secret" />
                                         </div>
-
                                         <div class="row mt8">
                                             <label for="meli_redirect_uri"
                                                 class="col-lg-3 o_light_label" />
                                             <field name="meli_redirect_uri" />
                                         </div>
                                     </div>
-
                                     <div class="mt16">
                                         <button type="object"
                                             name="button_meli_authorize"
@@ -48,7 +46,6 @@
                                             conexión.
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -57,12 +54,13 @@
             </field>
         </record>
 
-        <record id="view_meli_config_settings_form" model="ir.ui.view">
-        </record>
-
         <record id="action_meli_config_settings" model="ir.actions.act_window">
+            <field name="name">Mercado Libre - Configuración</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="view_id" ref="view_meli_config_settings_form" />
         </record>
-
 
         <menuitem id="menu_meli_root"
             name="Mercado Libre"
@@ -73,9 +71,11 @@
 
         <menuitem id="menu_meli_config_child"
             name="Configuración"
-            parent="menu_meli_root" action="action_meli_config_settings"
+            parent="menu_meli_root"
+            action="action_meli_config_settings"
             sequence="10"
             groups="base.group_system"
         />
+
     </data>
 </odoo>
