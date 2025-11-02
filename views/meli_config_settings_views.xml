@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_meli_integration" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.meli</field>
+            <field name="model">res.config.settings</field>
+
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='integration']" position="inside">
+
+                    <div class="col-12 col-lg-6 o_setting_box" id="meli_integration_settings">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Mercado Libre</span>
+                            <span class="fa fa-2x fa-dropbox" title="Mercado Libre" />
+                            <div class="text-muted">
+                                Configura la conexión con la API de Mercado Libre
+                            </div>
+                            <div class="content-group mt16">
+                                <div class="row">
+                                    <label for="meli_app_id" class="col-lg-4 o_light_label" />
+                                    <field name="meli_app_id" />
+                                </div>
+                                <div class="row mt8">
+                                    <label for="meli_client_secret" class="col-lg-4 o_light_label" />
+                                    <field name="meli_client_secret" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
