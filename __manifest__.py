@@ -22,7 +22,7 @@
         "mail",
     ],
     "data": [
-        "views/meli_config_settings_views.xml",
+        "views/meli_config_views.xml",
         # 'views/product_template_views.xml',
         # 'views/meli_menu_views.xml',
     ],
