@@ -57,25 +57,23 @@
             </field>
         </record>
 
-        <record id="action_meli_config_settings" model="ir.actions.act_window">
-            <field name="name">Mercado Libre - Configuración</field>
-            <field name="res_model">res.config.settings</field>
-            <field name="view_mode">form</field>
-            <field name="target">inline</field>
-            <field name="view_id" ref="view_meli_config_settings_form" />
+        <record id="view_meli_config_settings_form" model="ir.ui.view">
         </record>
+
+        <record id="action_meli_config_settings" model="ir.actions.act_window">
+        </record>
+
 
         <menuitem id="menu_meli_root"
             name="Mercado Libre"
-            sequence="20"
-            web_icon="fa fa-shopping-cart"
+            sequence="25"
+            web_icon="gs_mercado_libre,static/description/icon.png"
             groups="base.group_system"
         />
 
         <menuitem id="menu_meli_config_child"
             name="Configuración"
-            parent="menu_meli_root"
-            action="action_meli_config_settings"
+            parent="menu_meli_root" action="action_meli_config_settings"
             sequence="10"
             groups="base.group_system"
         />
