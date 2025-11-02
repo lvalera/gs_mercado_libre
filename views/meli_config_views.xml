@@ -29,7 +29,26 @@
                                                 class="col-lg-3 o_light_label" />
                                             <field name="meli_client_secret" />
                                         </div>
+
+                                        <div class="row mt8">
+                                            <label for="meli_redirect_uri"
+                                                class="col-lg-3 o_light_label" />
+                                            <field name="meli_redirect_uri" />
+                                        </div>
                                     </div>
+
+                                    <div class="mt16">
+                                        <button type="object"
+                                            name="button_meli_authorize"
+                                            string="1. Autorizar Conexión con MELI"
+                                            class="btn-primary"
+                                            icon="fa-arrow-right" />
+                                        <div class="text-muted">
+                                            Serás redirigido a Mercado Libre para aprobar la
+                                            conexión.
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -46,11 +65,19 @@
             <field name="view_id" ref="view_meli_config_settings_form" />
         </record>
 
-        <menuitem id="menu_meli_config"
+        <menuitem id="menu_meli_root"
             name="Mercado Libre"
-            parent="base.menu_config" sequence="100"
-            action="action_meli_config_settings"
+            sequence="20"
+            web_icon="fa fa-shopping-cart"
+            groups="base.group_system"
         />
 
+        <menuitem id="menu_meli_config_child"
+            name="Configuración"
+            parent="menu_meli_root"
+            action="action_meli_config_settings"
+            sequence="10"
+            groups="base.group_system"
+        />
     </data>
 </odoo>
